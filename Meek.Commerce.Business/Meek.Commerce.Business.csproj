@@ -37,6 +37,22 @@
     <AssemblyOriginatorKeyFile>studio032.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Meek.Business, Version=1.0.0.0, Culture=neutral, PublicKeyToken=334ce273b5f41e36, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Meek.Business.dll</HintPath>
+    </Reference>
+    <Reference Include="Meek.Commerce.Extendable.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=334ce273b5f41e36, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Meek.Commerce.Extendable.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Meek.Commerce.Framework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=334ce273b5f41e36, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Meek.Commerce.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Meek.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=334ce273b5f41e36, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Meek.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System">
       <Private>True</Private>
     </Reference>
@@ -60,10 +76,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="studio032.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Meek.Commerce.Extendable.Business\Meek.Commerce.Extendable.Business.csproj">
+      <Project>{D304B277-C7E8-450F-B9B7-52E68D78218D}</Project>
+      <Name>Meek.Commerce.Extendable.Business</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

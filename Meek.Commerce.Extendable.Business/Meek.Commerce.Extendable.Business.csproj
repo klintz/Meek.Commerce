@@ -37,6 +37,17 @@
     <AssemblyOriginatorKeyFile>studio032.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Meek.Business">
+      <HintPath>..\Assemblies\Meek.Business.dll</HintPath>
+    </Reference>
+    <Reference Include="Meek.Commerce.Extendable.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=334ce273b5f41e36, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Meek.Commerce.Extendable.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Meek.Commerce.Framework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=334ce273b5f41e36, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Meek.Commerce.Framework.dll</HintPath>
+    </Reference>
     <Reference Include="System">
       <Private>True</Private>
     </Reference>
@@ -60,6 +71,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ILogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
