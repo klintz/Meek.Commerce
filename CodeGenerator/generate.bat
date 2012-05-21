@@ -9,3 +9,5 @@ set outputview="output\View.cs"
 set entitycontainer="DataContext"
 
 EdmGen /mode:fullgeneration /connectionstring:%connectionstring% /namespace:%namespace% /language:%language% /outobjectlayer:%outputobjectlayer% /outssdl:%outputssdl% /outcsdl:%outputcsdl% /outmsl:%outputmsl% /outviews:%outputview% /entitycontainer:%entitycontainer% /nologo
+
+pause
