@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meek.Commerce.Extendable.Data", "..\Meek.Commerce.Extendable.Data\Meek.Commerce.Extendable.Data.csproj", "{B592EAB2-B10E-4ABF-9CCF-0926C22FF982}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "001.Extendable", "001.Extendable", "{840971B7-F509-4F62-8E6A-16E240396061}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "002.Data", "002.Data", "{286F5546-AD40-4C7F-AD64-1270D9144DAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meek.Commerce.Data", "..\Meek.Commerce.Data\Meek.Commerce.Data.csproj", "{139B98BD-CF3A-4AC6-8CF3-9360E5B60111}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B592EAB2-B10E-4ABF-9CCF-0926C22FF982}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B592EAB2-B10E-4ABF-9CCF-0926C22FF982}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B592EAB2-B10E-4ABF-9CCF-0926C22FF982}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B592EAB2-B10E-4ABF-9CCF-0926C22FF982}.Release|Any CPU.Build.0 = Release|Any CPU
+		{139B98BD-CF3A-4AC6-8CF3-9360E5B60111}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{139B98BD-CF3A-4AC6-8CF3-9360E5B60111}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{139B98BD-CF3A-4AC6-8CF3-9360E5B60111}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{139B98BD-CF3A-4AC6-8CF3-9360E5B60111}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B592EAB2-B10E-4ABF-9CCF-0926C22FF982} = {840971B7-F509-4F62-8E6A-16E240396061}
+		{139B98BD-CF3A-4AC6-8CF3-9360E5B60111} = {286F5546-AD40-4C7F-AD64-1270D9144DAF}
+	EndGlobalSection
+EndGlobal
