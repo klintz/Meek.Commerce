@@ -47,6 +47,10 @@
       <HintPath>..\bin\Meek.Commerce.Extendable.Data.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
+    <Reference Include="Meek.Commerce.Framework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=334ce273b5f41e36, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Meek.Commerce.Framework.dll</HintPath>
+    </Reference>
     <Reference Include="Meek.Data">
       <HintPath>..\Assemblies\Meek.Data.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
@@ -89,6 +93,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataContext.cs" />
+    <Compile Include="DataContext.designer.cs">
+      <DependentUpon>DataContext.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataProvider.cs" />
     <Compile Include="DataSession.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
