@@ -1,13 +1,29 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "001.Extendable", "001.Extendable", "{840971B7-F509-4F62-8E6A-16E240396061}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "003.Business.Extendable", "003.Business.Extendable", "{840971B7-F509-4F62-8E6A-16E240396061}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "002.Business", "002.Business", "{286F5546-AD40-4C7F-AD64-1270D9144DAF}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "004.Business", "004.Business", "{286F5546-AD40-4C7F-AD64-1270D9144DAF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meek.Commerce.Extendable.Business", "..\Meek.Commerce.Extendable.Business\Meek.Commerce.Extendable.Business.csproj", "{D304B277-C7E8-450F-B9B7-52E68D78218D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meek.Commerce.Business", "..\Meek.Commerce.Business\Meek.Commerce.Business.csproj", "{241D7D63-D368-43CD-AF0C-27AC6F59EA17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Meek.Commerce.Extendable.Business", "..\Unit.Tests\Test.Meek.Commerce.Extendable.Business\Test.Meek.Commerce.Extendable.Business.csproj", "{F7333F25-3F92-43CD-A90C-106D0B7CAC6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Meek.Commerce.Business", "..\Unit.Tests\Test.Meek.Commerce.Business\Test.Meek.Commerce.Business.csproj", "{108A0BB2-32C1-4C4C-A77A-82FB5CC2E650}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "001.Data.Extendable", "001.Data.Extendable", "{B5139645-4A6C-4541-85B8-2F5A02F08192}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meek.Commerce.Extendable.Data", "..\Meek.Commerce.Extendable.Data\Meek.Commerce.Extendable.Data.csproj", "{B592EAB2-B10E-4ABF-9CCF-0926C22FF982}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Meek.Commerce.Extendable.Data", "..\Unit.Tests\Test.Meek.Commerce.Extendable.Data\Test.Meek.Commerce.Extendable.Data.csproj", "{51A4712E-F553-4120-A363-7BA0AB9FADB2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "002.Data", "002.Data", "{4C0000AC-026E-42FC-9326-A5A60E3BC7B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Meek.Commerce.Data", "..\Unit.Tests\Test.Meek.Commerce.Data\Test.Meek.Commerce.Data.csproj", "{83699788-9F87-4AFB-AE75-668A992FDBE8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meek.Commerce.Data", "..\Meek.Commerce.Data\Meek.Commerce.Data.csproj", "{139B98BD-CF3A-4AC6-8CF3-9360E5B60111}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,12 +39,42 @@ Global
 		{241D7D63-D368-43CD-AF0C-27AC6F59EA17}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{241D7D63-D368-43CD-AF0C-27AC6F59EA17}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{241D7D63-D368-43CD-AF0C-27AC6F59EA17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7333F25-3F92-43CD-A90C-106D0B7CAC6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7333F25-3F92-43CD-A90C-106D0B7CAC6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7333F25-3F92-43CD-A90C-106D0B7CAC6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7333F25-3F92-43CD-A90C-106D0B7CAC6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{108A0BB2-32C1-4C4C-A77A-82FB5CC2E650}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{108A0BB2-32C1-4C4C-A77A-82FB5CC2E650}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{108A0BB2-32C1-4C4C-A77A-82FB5CC2E650}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{108A0BB2-32C1-4C4C-A77A-82FB5CC2E650}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B592EAB2-B10E-4ABF-9CCF-0926C22FF982}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B592EAB2-B10E-4ABF-9CCF-0926C22FF982}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B592EAB2-B10E-4ABF-9CCF-0926C22FF982}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B592EAB2-B10E-4ABF-9CCF-0926C22FF982}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51A4712E-F553-4120-A363-7BA0AB9FADB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51A4712E-F553-4120-A363-7BA0AB9FADB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51A4712E-F553-4120-A363-7BA0AB9FADB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51A4712E-F553-4120-A363-7BA0AB9FADB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83699788-9F87-4AFB-AE75-668A992FDBE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83699788-9F87-4AFB-AE75-668A992FDBE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83699788-9F87-4AFB-AE75-668A992FDBE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83699788-9F87-4AFB-AE75-668A992FDBE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{139B98BD-CF3A-4AC6-8CF3-9360E5B60111}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{139B98BD-CF3A-4AC6-8CF3-9360E5B60111}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{139B98BD-CF3A-4AC6-8CF3-9360E5B60111}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{139B98BD-CF3A-4AC6-8CF3-9360E5B60111}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{D304B277-C7E8-450F-B9B7-52E68D78218D} = {840971B7-F509-4F62-8E6A-16E240396061}
+		{F7333F25-3F92-43CD-A90C-106D0B7CAC6E} = {840971B7-F509-4F62-8E6A-16E240396061}
 		{241D7D63-D368-43CD-AF0C-27AC6F59EA17} = {286F5546-AD40-4C7F-AD64-1270D9144DAF}
+		{108A0BB2-32C1-4C4C-A77A-82FB5CC2E650} = {286F5546-AD40-4C7F-AD64-1270D9144DAF}
+		{B592EAB2-B10E-4ABF-9CCF-0926C22FF982} = {B5139645-4A6C-4541-85B8-2F5A02F08192}
+		{51A4712E-F553-4120-A363-7BA0AB9FADB2} = {B5139645-4A6C-4541-85B8-2F5A02F08192}
+		{83699788-9F87-4AFB-AE75-668A992FDBE8} = {4C0000AC-026E-42FC-9326-A5A60E3BC7B0}
+		{139B98BD-CF3A-4AC6-8CF3-9360E5B60111} = {4C0000AC-026E-42FC-9326-A5A60E3BC7B0}
 	EndGlobalSection
 EndGlobal

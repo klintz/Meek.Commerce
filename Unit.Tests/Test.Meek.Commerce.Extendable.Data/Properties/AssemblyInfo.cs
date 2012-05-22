@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Test.Meek.Commerce.Framework")]
+[assembly: AssemblyTitle("Test.Meek.Commerce.Extendable.Data")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Test.Meek.Commerce.Framework")]
+[assembly: AssemblyProduct("Test.Meek.Commerce.Extendable.Data")]
 [assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("9c1a2ca3-1a1c-4e34-907a-ca3356e69c69")]
+[assembly: Guid("72fabe12-d834-4d5d-aa3a-c49dfd7bc3f5")]
 
 // Version information for an assembly consists of the following four values:
 //
