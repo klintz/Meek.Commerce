@@ -70,6 +70,7 @@
     <Compile Include="Authentication\ISystemUser.cs" />
     <Compile Include="Authentication\IUserrable.cs" />
     <Compile Include="Authentication\SystemUser.cs" />
+    <Compile Include="Model\IAuditable.cs" />
     <Compile Include="Model\Model.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

@@ -19,7 +19,7 @@ namespace Meek.Commerce.Framework.Model
 {
     [DataContract(IsReference = true)]
     [KnownType(typeof(SystemUserAccount))]
-    public partial class SystemUserRole: IObjectWithChangeTracker, INotifyPropertyChanged
+    public partial class SystemUserRole: IAuditable, IObjectWithChangeTracker, INotifyPropertyChanged
     {
         #region Primitive Properties
     
