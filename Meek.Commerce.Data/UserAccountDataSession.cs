@@ -11,11 +11,15 @@ namespace Meek.Commerce.Data
         {
             return CurrentContext.SystemUserAccount.SingleOrDefault(u => u.ID == id);
         }
-
         
         public SystemUserAccount GetSystemUserAccount(string userName)
         {
             return CurrentContext.SystemUserAccount.SingleOrDefault(u => u.UserName == userName);
+        }
+
+        public void SaveUserAccount(SystemUserAccount userAccount)
+        {
+            CurrentContext.SystemUserAccount.AddObject(userAccount);
         }
     }
 }

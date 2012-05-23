@@ -12,6 +12,7 @@ namespace Meek.Commerce.Extendable.Data
         [OperationContract(Name = "GetSystemUserAccountByUserName")]
         SystemUserAccount GetSystemUserAccount(string userName);
 
-
+        [OperationContract(Name = "SaveUserAccount")]
+        void SaveUserAccount(SystemUserAccount userAccount);
     }
 }
