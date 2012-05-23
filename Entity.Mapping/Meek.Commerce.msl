@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MeekCommerceFrameworkModelStoreContainer" CdmEntityContainer="DataContext">
+    <EntitySetMapping Name="SystemUserAccount" StoreEntitySet="SystemUserAccount" TypeName="Meek.Commerce.Framework.Model.SystemUserAccount">
+      <ScalarProperty Name="ID" ColumnName="ID" />
+      <ScalarProperty Name="UserName" ColumnName="UserName" />
+      <ScalarProperty Name="Password" ColumnName="Password" />
+      <ScalarProperty Name="PasswordSalt" ColumnName="PasswordSalt" />
+      <ScalarProperty Name="UserRoleID" ColumnName="UserRoleID" />
+      <ScalarProperty Name="ProfileID" ColumnName="ProfileID" />
+      <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+      <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+      <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+      <ScalarProperty Name="UserModified" ColumnName="UserModified" />
+      <ScalarProperty Name="DateModified" ColumnName="DateModified" />
+    </EntitySetMapping>
+    <EntitySetMapping Name="SystemUserRole" StoreEntitySet="SystemUserRole" TypeName="Meek.Commerce.Framework.Model.SystemUserRole">
+      <ScalarProperty Name="ID" ColumnName="ID" />
+      <ScalarProperty Name="RoleCode" ColumnName="RoleCode" />
+      <ScalarProperty Name="Description" ColumnName="Description" />
+      <ScalarProperty Name="IsTemplate" ColumnName="IsTemplate" />
+      <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+      <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+      <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+      <ScalarProperty Name="UserModified" ColumnName="UserModified" />
+      <ScalarProperty Name="DateModified" ColumnName="DateModified" />
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

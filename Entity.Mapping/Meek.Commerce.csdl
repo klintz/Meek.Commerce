@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Meek.Commerce.Framework.Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="DataContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="SystemUserAccount" EntityType="Meek.Commerce.Framework.Model.SystemUserAccount" />
+    <EntitySet Name="SystemUserRole" EntityType="Meek.Commerce.Framework.Model.SystemUserRole" />
+    <AssociationSet Name="FK_SystemUserAccount_SystemUserRole" Association="Meek.Commerce.Framework.Model.FK_SystemUserAccount_SystemUserRole">
+      <End Role="SystemUserRole" EntitySet="SystemUserRole" />
+      <End Role="SystemUserAccount" EntitySet="SystemUserAccount" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SystemUserRole_UserCreated" Association="Meek.Commerce.Framework.Model.FK_SystemUserRole_UserCreated">
+      <End Role="SystemUserAccount" EntitySet="SystemUserAccount" />
+      <End Role="SystemUserRole" EntitySet="SystemUserRole" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SystemUserRole_UserModified" Association="Meek.Commerce.Framework.Model.FK_SystemUserRole_UserModified">
+      <End Role="SystemUserAccount" EntitySet="SystemUserAccount" />
+      <End Role="SystemUserRole" EntitySet="SystemUserRole" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="SystemUserAccount">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="Password" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="PasswordSalt" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="UserRoleID" Type="Int64" Nullable="false" />
+    <Property Name="ProfileID" Type="Int64" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="UserCreated" Type="Int64" />
+    <Property Name="DateCreated" Type="DateTime" />
+    <Property Name="UserModified" Type="Int64" />
+    <Property Name="DateModified" Type="DateTime" />
+    <NavigationProperty Name="SystemUserRole" Relationship="Meek.Commerce.Framework.Model.FK_SystemUserAccount_SystemUserRole" FromRole="SystemUserAccount" ToRole="SystemUserRole" />
+    <NavigationProperty Name="SystemUserRole1" Relationship="Meek.Commerce.Framework.Model.FK_SystemUserRole_UserCreated" FromRole="SystemUserAccount" ToRole="SystemUserRole" />
+    <NavigationProperty Name="SystemUserRole2" Relationship="Meek.Commerce.Framework.Model.FK_SystemUserRole_UserModified" FromRole="SystemUserAccount" ToRole="SystemUserRole" />
+  </EntityType>
+  <EntityType Name="SystemUserRole">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleCode" Type="String" Nullable="false" MaxLength="60" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="IsTemplate" Type="Boolean" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="UserCreated" Type="Int64" />
+    <Property Name="DateCreated" Type="DateTime" />
+    <Property Name="UserModified" Type="Int64" />
+    <Property Name="DateModified" Type="DateTime" />
+    <NavigationProperty Name="SystemUserAccount" Relationship="Meek.Commerce.Framework.Model.FK_SystemUserAccount_SystemUserRole" FromRole="SystemUserRole" ToRole="SystemUserAccount" />
+    <NavigationProperty Name="SystemUserAccount1" Relationship="Meek.Commerce.Framework.Model.FK_SystemUserRole_UserCreated" FromRole="SystemUserRole" ToRole="SystemUserAccount" />
+    <NavigationProperty Name="SystemUserAccount2" Relationship="Meek.Commerce.Framework.Model.FK_SystemUserRole_UserModified" FromRole="SystemUserRole" ToRole="SystemUserAccount" />
+  </EntityType>
+  <Association Name="FK_SystemUserAccount_SystemUserRole">
+    <End Role="SystemUserRole" Type="Meek.Commerce.Framework.Model.SystemUserRole" Multiplicity="1" />
+    <End Role="SystemUserAccount" Type="Meek.Commerce.Framework.Model.SystemUserAccount" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SystemUserRole">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SystemUserAccount">
+        <PropertyRef Name="UserRoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SystemUserRole_UserCreated">
+    <End Role="SystemUserAccount" Type="Meek.Commerce.Framework.Model.SystemUserAccount" Multiplicity="0..1" />
+    <End Role="SystemUserRole" Type="Meek.Commerce.Framework.Model.SystemUserRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SystemUserAccount">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SystemUserRole">
+        <PropertyRef Name="UserCreated" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SystemUserRole_UserModified">
+    <End Role="SystemUserAccount" Type="Meek.Commerce.Framework.Model.SystemUserAccount" Multiplicity="0..1" />
+    <End Role="SystemUserRole" Type="Meek.Commerce.Framework.Model.SystemUserRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SystemUserAccount">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SystemUserRole">
+        <PropertyRef Name="UserModified" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

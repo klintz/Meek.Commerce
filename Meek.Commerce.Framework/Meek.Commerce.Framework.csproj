@@ -48,6 +48,7 @@
     </Reference>
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq">
       <Private>True</Private>
@@ -69,10 +70,24 @@
     <Compile Include="Authentication\ISystemUser.cs" />
     <Compile Include="Authentication\IUserrable.cs" />
     <Compile Include="Authentication\SystemUser.cs" />
-    <Compile Include="Model\Entities.cs" />
+    <Compile Include="Model\Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SystemUserAccount.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SystemUserRole.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Model\Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model.cs</LastGenOutput>
+    </None>
     <None Include="studio032.snk" />
   </ItemGroup>
   <ItemGroup>

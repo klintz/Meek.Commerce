@@ -71,6 +71,8 @@
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq">
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <Private>True</Private>
@@ -94,8 +96,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataContext.cs" />
-    <Compile Include="DataContext.designer.cs">
-      <DependentUpon>DataContext.cs</DependentUpon>
+    <Compile Include="DataContext.Extensions.cs">
+      <DependentUpon>DataContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataContext1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataContext.tt</DependentUpon>
     </Compile>
     <Compile Include="DataProvider.cs" />
     <Compile Include="DataSession.cs" />
@@ -104,7 +111,14 @@
     <Compile Include="UserAccountDataSession.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="DataContext.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DataContext1.cs</LastGenOutput>
+    </None>
     <None Include="studio032.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
