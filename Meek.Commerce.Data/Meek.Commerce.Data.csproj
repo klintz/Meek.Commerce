@@ -106,7 +106,6 @@
     </Compile>
     <Compile Include="DataProvider.cs" />
     <Compile Include="DataSession.cs" />
-    <Compile Include="DataSessionFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserAccountDataSession.cs" />
   </ItemGroup>
