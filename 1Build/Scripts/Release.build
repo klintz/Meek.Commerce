@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<project name="Meek Framework" default="meek.build" basedir=".">
+<project name="Meek Framework" default="meek.commerce.build" basedir=".">
 	
 	<!-- Properties -->
 	<property name="nant.settings.currentframework" value="net-4.0" />
@@ -16,7 +16,7 @@
 		<mkdir dir="${publish.dir}" />				
 	</target>
 	
-	<target name="build.lib" failonerror="true">
+	<target name="build.meek.lib" failonerror="true">
 		<foreach item="File" property="filename" >
 			<in>
 				<items>
@@ -34,16 +34,25 @@
 	</target>
 	
 	<target name="copy.build.files" failonerror="true">
-		<copy todir="${publish.lib.dir}" includeemptydirs="true" overwrite="false" verbose="true">
+		<!-- Copy Assemblies -->
+		<copy todir="${publish.web.dir}\bin" includeemptydirs="true" overwrite="true" verbose="true">
 			<fileset basedir="${assemblies.dir}">
 				<include name="**/*.*" />
 			</fileset>
 		</copy>	
+		
+		<!-- Copy Web Application -->
+		<!--<copy todir="${publish.web.dir}" includeemptydirs="true" overwrite="true" verbose="true">
+			<fileset basedir="${assemblies.dir}">
+				<include name="**/*.*" />
+			</fileset>
+		</copy>	-->
+		
 	</target>
 	
-	<target name="meek.build" depends="init" failonerror="true">
+	<target name="meek.commerce.build" depends="init" failonerror="true">
 		<echo message="Build Started" />
-		<call target="build.lib" />		
+		<call target="build.meek.lib" />		
 		<call target="copy.build.files" />		
 		<echo message="Build Completed" />
 	</target>  
