@@ -8,7 +8,7 @@ namespace Meek.Commerce.Data
 {
     public partial class DataContext : IUserrable
     {
-        public ISystemUser User { get; set; }
+        public ISystemUser CurrentUser { get; set; }
 
         public override int SaveChanges(System.Data.Objects.SaveOptions options)
         {
@@ -19,7 +19,7 @@ namespace Meek.Commerce.Data
             var addedEntities = from e in addedEntries where e.Entity is IAuditable select e.Entity as IAuditable;
             foreach (var addedEntity in addedEntities)
             {
-                addedEntity.UserCreated = User.UserID;
+                addedEntity.UserCreated = CurrentUser.UserID;
                 addedEntity.DateCreated = transactionDate;
             }
 
@@ -28,7 +28,7 @@ namespace Meek.Commerce.Data
             var modifiedEntities = from e in modifiedEntries where e.Entity is IAuditable select e.Entity as IAuditable;
             foreach (var modifiedEntity in modifiedEntities)
             {
-                modifiedEntity.UserModified = User.UserID;
+                modifiedEntity.UserModified = CurrentUser.UserID;
                 modifiedEntity.DateModified = transactionDate;
             }
             

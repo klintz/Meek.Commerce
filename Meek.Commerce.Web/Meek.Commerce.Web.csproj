@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{241D7D63-D368-43CD-AF0C-27AC6F59EA17}</ProjectGuid>
+    <ProjectGuid>{7DA64FB7-BFA5-4040-8C2D-BBD2C1F919C8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Meek.Commerce.Business</RootNamespace>
-    <AssemblyName>Meek.Commerce.Business</AssemblyName>
+    <RootNamespace>Meek.Commerce.Web</RootNamespace>
+    <AssemblyName>Meek.Commerce.Web</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -37,62 +37,32 @@
     <AssemblyOriginatorKeyFile>studio032.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Meek.Business, Version=1.0.0.0, Culture=neutral, PublicKeyToken=334ce273b5f41e36, processorArchitecture=MSIL">
+    <Reference Include="Meek, Version=1.0.0.0, Culture=neutral, PublicKeyToken=334ce273b5f41e36, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\bin\Meek.Business.dll</HintPath>
-    </Reference>
-    <Reference Include="Meek.Commerce.Extendable.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=334ce273b5f41e36, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\bin\Meek.Commerce.Extendable.Data.dll</HintPath>
+      <HintPath>..\Assemblies\Meek.dll</HintPath>
     </Reference>
     <Reference Include="Meek.Commerce.Framework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=334ce273b5f41e36, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\bin\Meek.Commerce.Framework.dll</HintPath>
     </Reference>
-    <Reference Include="Meek.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=334ce273b5f41e36, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\bin\Meek.Data.dll</HintPath>
+    <Reference Include="Meek.Web">
+      <HintPath>..\Assemblies\Meek.Web.dll</HintPath>
     </Reference>
-    <Reference Include="Meek.Data.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=334ce273b5f41e36, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Assemblies\Meek.Data.EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="System">
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Core">
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Data.Entity" />
-    <Reference Include="System.Xml.Linq">
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Data.DataSetExtensions">
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.CSharp">
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Data">
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Xml">
-      <Private>True</Private>
-    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserAccountLogic.cs" />
+    <Compile Include="SystemUserManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="studio032.snk" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Meek.Commerce.Extendable.Business\Meek.Commerce.Extendable.Business.csproj">
-      <Project>{D304B277-C7E8-450F-B9B7-52E68D78218D}</Project>
-      <Name>Meek.Commerce.Extendable.Business</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

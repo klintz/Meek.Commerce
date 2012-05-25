@@ -5,7 +5,7 @@ namespace Meek.Commerce.Framework.Authentication
     [ServiceContract]
     public interface IUserrable
     {
-        ISystemUser User
+        ISystemUser CurrentUser
         {
             [OperationContract]
             get;

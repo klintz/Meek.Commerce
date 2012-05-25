@@ -6,7 +6,7 @@ namespace Meek.Commerce.Business
 {
     public abstract class BaseLogic : Meek.Business.BaseLogic, ILogic, IUserrable
     {
-        public virtual ISystemUser User { get; set; }
+        public virtual ISystemUser CurrentUser { get; set; }
     }
 
     public abstract class BaseLogic<TDataSession> : Meek.Business.BaseLogic<TDataSession>, ILogic, IUserrable
@@ -14,7 +14,7 @@ namespace Meek.Commerce.Business
     {
         private TDataSession _dataSession;
 
-        public virtual ISystemUser User { get; set; }
+        public virtual ISystemUser CurrentUser { get; set; }
 
         protected override TDataSession DataSession
         {
@@ -22,19 +22,17 @@ namespace Meek.Commerce.Business
             {
                 if (Equals(_dataSession, null))
                 {
-                    _dataSession = DataSessionFactory.CreateDataSession(DefaultDataSession);
+                    _dataSession = DataSessionFactory.CreateDataSession<TDataSession>();
                     if (!Equals(_dataSession, null))
                     {
                         if (_dataSession is IUserrable)
                         {
-                            (_dataSession as IUserrable).User = User;
+                            (_dataSession as IUserrable).CurrentUser = CurrentUser;
                         }
                     }
                 }
                 return _dataSession;
             }
-        }
-
-        protected abstract TDataSession DefaultDataSession { get; }
+        }        
     }
 }

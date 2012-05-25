@@ -1,20 +1,12 @@
-﻿using Meek.Commerce.Data;
-using Meek.Commerce.Extendable.Business;
+﻿using Meek.Commerce.Extendable.Business;
 using Meek.Commerce.Extendable.Data;
 using Meek.Commerce.Framework.Model;
+using Meek.Commerce.Framework.Authentication;
 
 namespace Meek.Commerce.Business
 {
     public class UserAccountLogic : BaseLogic<IUserAccountDataSession>, IUserAccountLogic
     {
-        protected override IUserAccountDataSession DefaultDataSession
-        {
-            get
-            {
-                return new UserAccountDataSession();
-            }
-        }
-
         public SystemUserAccount NewSystemUserAccount()
         {
             return new SystemUserAccount();
@@ -31,3 +23,4 @@ namespace Meek.Commerce.Business
         }
     }
 }
+
