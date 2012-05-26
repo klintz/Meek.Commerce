@@ -21,6 +21,8 @@ namespace Meek.Commerce.Framework.Authentication
         [DataMember]
         public string UserRoleCode { get; private set; }
 
+        private SystemUser()
+        { }
 
         private SystemUser(SystemUserAccount account)
         {
@@ -33,6 +35,13 @@ namespace Meek.Commerce.Framework.Authentication
         public static ISystemUser NewSystemUser(SystemUserAccount account)
         {
             return new SystemUser(account);
+        }
+
+        public static ISystemUser NewSystemUser()
+        {
+            return new SystemUser { 
+                UserID = 0,
+                UserRoleID = 0};  
         }
     }
 }

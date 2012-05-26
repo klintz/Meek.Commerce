@@ -17,16 +17,8 @@ namespace Meek.Commerce.Web
         private static ISystemUser DefaultUser
         {
             get
-            {
-                if (Equals(_defaultUser, null))
-                {
-                    var account = new SystemUserAccount
-                    {
-                        ID = 0,
-                        UserRoleID = 0
-                    };
-                    _defaultUser = SystemUser.NewSystemUser(account);
-                }
+            {                  
+                _defaultUser = _defaultUser = SystemUser.NewSystemUser();                
                 return _defaultUser;
             }
         }
