@@ -6,7 +6,7 @@
 
         long UserRoleID { get; }
 
-        string UserName { get; }
+        string Username { get; }
 
         string DisplayName { get; }
 
