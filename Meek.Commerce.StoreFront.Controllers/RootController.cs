@@ -10,8 +10,9 @@ namespace Meek.Commerce.StoreFront.Controllers
     public class RootController : Web.Mvc.Controller
     {
         public ActionResult Index()
-        {
-            return View("Index");
+        {            
+            ViewData["Title"] = "Welcome";
+            return View();
         }
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using Meek.Commerce.Web.Mvc;
 
 namespace Meek.Commerce.StoreFront
 {
@@ -31,6 +32,10 @@ namespace Meek.Commerce.StoreFront
 
         protected void Application_Start()
         {
+            ViewEngines.Engines.Clear();
+            var engine = new ExtendedRazorViewEngine();
+
+            ViewEngines.Engines.Add(engine);
             AreaRegistration.RegisterAllAreas();
 
             RegisterGlobalFilters(GlobalFilters.Filters);
