@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Meek.Commerce.Business
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "003.StoreFront.Controller", "003.StoreFront.Controller", "{ADFACAF3-48B6-4EBE-B237-1D16086E3104}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "004.StoreFront.View", "004.StoreFront.View", "{B08781E8-5628-4125-A492-6A463A80E327}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "004.StoreFront", "004.StoreFront", "{B08781E8-5628-4125-A492-6A463A80E327}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meek.Commerce.StoreFront", "..\Meek.Commerce.StoreFront\Meek.Commerce.StoreFront.csproj", "{AD779433-1266-4CBF-B3FE-3ADFB8A0FB2D}"
 EndProject
