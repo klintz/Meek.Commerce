@@ -22,7 +22,7 @@ namespace Meek.Commerce.Business
             {
                 if (Equals(_dataSession, null))
                 {
-                    _dataSession = DataSessionFactory.CreateDataSession<TDataSession>();
+                    _dataSession = CreateDataSession<TDataSession>();
                     if (!Equals(_dataSession, null))
                     {
                         if (_dataSession is IUserrable)
