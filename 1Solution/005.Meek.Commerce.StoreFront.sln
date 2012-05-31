@@ -13,9 +13,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Meek.Commerce.Extendab
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Meek.Commerce.Business", "..\Unit.Tests\Test.Meek.Commerce.Business\Test.Meek.Commerce.Business.csproj", "{108A0BB2-32C1-4C4C-A77A-82FB5CC2E650}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "003.StoreFront.Controller", "003.StoreFront.Controller", "{ADFACAF3-48B6-4EBE-B237-1D16086E3104}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "004.StoreFront.Controller", "004.StoreFront.Controller", "{ADFACAF3-48B6-4EBE-B237-1D16086E3104}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "004.StoreFront", "004.StoreFront", "{B08781E8-5628-4125-A492-6A463A80E327}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "005.StoreFront", "005.StoreFront", "{B08781E8-5628-4125-A492-6A463A80E327}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meek.Commerce.StoreFront", "..\Meek.Commerce.StoreFront\Meek.Commerce.StoreFront.csproj", "{AD779433-1266-4CBF-B3FE-3ADFB8A0FB2D}"
 EndProject
@@ -24,6 +24,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Meek.Commerce.StoreFront.Controllers", "..\Unit.Tests\Test.Meek.Commerce.StoreFront.Controllers\Test.Meek.Commerce.StoreFront.Controllers.csproj", "{630D508B-0408-4A78-AFB7-D63BA1913708}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Meek.Commerce.StoreFront", "..\Unit.Tests\Test.Meek.Commerce.StoreFront\Test.Meek.Commerce.StoreFront.csproj", "{1CF23F99-805A-44FA-B14F-29D12F092226}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "003.StoreFront.Helpers", "003.StoreFront.Helpers", "{049996EF-8340-45D1-9C5B-F28610215AA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meek.Commerce.StoreFront.Helpers", "..\Meek.Commerce.StoreFront.Helpers\Meek.Commerce.StoreFront.Helpers.csproj", "{22A5B321-7776-493B-9D5A-B7FD8601FBB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Meek.Commerce.StoreFront.Helpers", "..\Unit.Tests\Test.Meek.Commerce.StoreFront.Helpers\Test.Meek.Commerce.StoreFront.Helpers.csproj", "{26E10725-407F-43F5-8144-90F34E985158}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +69,14 @@ Global
 		{1CF23F99-805A-44FA-B14F-29D12F092226}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1CF23F99-805A-44FA-B14F-29D12F092226}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1CF23F99-805A-44FA-B14F-29D12F092226}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22A5B321-7776-493B-9D5A-B7FD8601FBB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22A5B321-7776-493B-9D5A-B7FD8601FBB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22A5B321-7776-493B-9D5A-B7FD8601FBB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22A5B321-7776-493B-9D5A-B7FD8601FBB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26E10725-407F-43F5-8144-90F34E985158}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26E10725-407F-43F5-8144-90F34E985158}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26E10725-407F-43F5-8144-90F34E985158}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26E10725-407F-43F5-8144-90F34E985158}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -76,5 +90,7 @@ Global
 		{630D508B-0408-4A78-AFB7-D63BA1913708} = {ADFACAF3-48B6-4EBE-B237-1D16086E3104}
 		{AD779433-1266-4CBF-B3FE-3ADFB8A0FB2D} = {B08781E8-5628-4125-A492-6A463A80E327}
 		{1CF23F99-805A-44FA-B14F-29D12F092226} = {B08781E8-5628-4125-A492-6A463A80E327}
+		{22A5B321-7776-493B-9D5A-B7FD8601FBB6} = {049996EF-8340-45D1-9C5B-F28610215AA3}
+		{26E10725-407F-43F5-8144-90F34E985158} = {049996EF-8340-45D1-9C5B-F28610215AA3}
 	EndGlobalSection
 EndGlobal

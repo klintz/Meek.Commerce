@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Meek.Commerce.Web.Mvc")]
+[assembly: AssemblyTitle("Test.Meek.Commerce.StoreFront.Helpers")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Meek.Commerce.Web.Mvc")]
+[assembly: AssemblyProduct("Test.Meek.Commerce.StoreFront.Helpers")]
 [assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("0f38851b-3679-42c3-a16c-220302f60da9")]
+[assembly: Guid("03b0deea-b169-4a34-8869-31c286e1f097")]
 
 // Version information for an assembly consists of the following four values:
 //

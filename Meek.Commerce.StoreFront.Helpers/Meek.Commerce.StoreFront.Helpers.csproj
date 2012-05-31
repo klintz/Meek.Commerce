@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{0621FCDA-6915-4FCB-A690-937B04030E86}</ProjectGuid>
+    <ProjectGuid>{22A5B321-7776-493B-9D5A-B7FD8601FBB6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Meek.Commerce.StoreFront.Controllers</RootNamespace>
-    <AssemblyName>Meek.Commerce.StoreFront.Controllers</AssemblyName>
+    <RootNamespace>Meek.Commerce.StoreFront.Helpers</RootNamespace>
+    <AssemblyName>Meek.Commerce.StoreFront.Helpers</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -53,9 +53,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\bin\Meek.Commerce.Extendable.Data.dll</HintPath>
     </Reference>
-    <Reference Include="Meek.Commerce.StoreFront.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=334ce273b5f41e36, processorArchitecture=MSIL">
+    <Reference Include="Meek.Commerce.Framework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=334ce273b5f41e36, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\bin\Meek.Commerce.StoreFront.Helpers.dll</HintPath>
+      <HintPath>..\bin\Meek.Commerce.Framework.dll</HintPath>
     </Reference>
     <Reference Include="Meek.Commerce.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=334ce273b5f41e36, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -83,10 +83,6 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Assemblies\System.Web.Mvc.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -94,15 +90,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Areas\Admin\AdminController.cs" />
-    <Compile Include="ErrorController.cs" />
-    <Compile Include="RootController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="studio032.snk" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

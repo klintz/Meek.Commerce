@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Test.Meek.Commerce.StoreFront.Controllers")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("TSTPND")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Test.Meek.Commerce.StoreFront.Controllers")]
-[assembly: AssemblyCopyright("Copyright © TSTPND 2012")]
+[assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

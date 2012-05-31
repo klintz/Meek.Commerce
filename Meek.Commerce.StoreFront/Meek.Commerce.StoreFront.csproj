@@ -39,6 +39,17 @@
     <AssemblyOriginatorKeyFile>studio032.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Meek, Version=1.0.0.0, Culture=neutral, PublicKeyToken=334ce273b5f41e36, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Assemblies\Meek.dll</HintPath>
+    </Reference>
+    <Reference Include="Meek.Business, Version=1.0.0.0, Culture=neutral, PublicKeyToken=334ce273b5f41e36, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Assemblies\Meek.Business.dll</HintPath>
+    </Reference>
+    <Reference Include="Meek.Commerce.StoreFront.Helpers">
+      <HintPath>..\bin\Meek.Commerce.StoreFront.Helpers.dll</HintPath>
+    </Reference>
     <Reference Include="Meek.Commerce.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=334ce273b5f41e36, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\bin\Meek.Commerce.Web.dll</HintPath>
@@ -46,6 +57,22 @@
     <Reference Include="Meek.Commerce.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=334ce273b5f41e36, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\bin\Meek.Commerce.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Meek.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=334ce273b5f41e36, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Assemblies\Meek.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Meek.Presentation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=334ce273b5f41e36, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Assemblies\Meek.Presentation.dll</HintPath>
+    </Reference>
+    <Reference Include="Meek.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=334ce273b5f41e36, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Assemblies\Meek.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Meek.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=334ce273b5f41e36, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Assemblies\Meek.Web.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
@@ -122,6 +149,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\modernizr-1.7.js" />
     <Content Include="Scripts\modernizr-1.7.min.js" />
+    <Content Include="Theme\Meek.Green\theme.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -141,9 +169,7 @@
     <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
     <Content Include="Shared\_MainLayout.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Theme\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
