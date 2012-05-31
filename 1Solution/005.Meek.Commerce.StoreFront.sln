@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meek.Commerce.StoreFront.Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Meek.Commerce.StoreFront.Controllers", "..\Unit.Tests\Test.Meek.Commerce.StoreFront.Controllers\Test.Meek.Commerce.StoreFront.Controllers.csproj", "{630D508B-0408-4A78-AFB7-D63BA1913708}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Meek.Commerce.StoreFront", "..\Unit.Tests\Test.Meek.Commerce.StoreFront\Test.Meek.Commerce.StoreFront.csproj", "{1CF23F99-805A-44FA-B14F-29D12F092226}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{630D508B-0408-4A78-AFB7-D63BA1913708}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{630D508B-0408-4A78-AFB7-D63BA1913708}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{630D508B-0408-4A78-AFB7-D63BA1913708}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CF23F99-805A-44FA-B14F-29D12F092226}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CF23F99-805A-44FA-B14F-29D12F092226}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CF23F99-805A-44FA-B14F-29D12F092226}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CF23F99-805A-44FA-B14F-29D12F092226}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,5 +75,6 @@ Global
 		{0621FCDA-6915-4FCB-A690-937B04030E86} = {ADFACAF3-48B6-4EBE-B237-1D16086E3104}
 		{630D508B-0408-4A78-AFB7-D63BA1913708} = {ADFACAF3-48B6-4EBE-B237-1D16086E3104}
 		{AD779433-1266-4CBF-B3FE-3ADFB8A0FB2D} = {B08781E8-5628-4125-A492-6A463A80E327}
+		{1CF23F99-805A-44FA-B14F-29D12F092226} = {B08781E8-5628-4125-A492-6A463A80E327}
 	EndGlobalSection
 EndGlobal
