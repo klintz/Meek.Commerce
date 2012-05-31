@@ -1,5 +1,6 @@
 *.Framework
 *.dotCover
 *.suo
+*.user
 _ReSharper.*
 packages/
