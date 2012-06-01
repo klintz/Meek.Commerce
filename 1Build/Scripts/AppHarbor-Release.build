@@ -35,29 +35,32 @@
 	
 	<target name="copy.build.files" failonerror="true">
 		<!-- Copy Assemblies -->
-		<copy todir="${publish.web.dir}\bin" includeemptydirs="true" overwrite="true" verbose="true">
+		<copy todir="${publish.appharbor.assemblies.dir}" includeemptydirs="true" overwrite="true" verbose="true">
+			<fileset basedir="${reference.assemblies.dir}">
+				<include name="**/*.*" />
+			</fileset>
+		</copy>	
+		
+		<!-- Copy Bin -->
+		<copy todir="${publish.appharbor.dir}\bin" includeemptydirs="true" overwrite="true" verbose="true">
 			<fileset basedir="${assemblies.dir}">
 				<include name="**/*.*" />
 			</fileset>
 		</copy>	
 		
 		<!-- Copy Web Application -->
-    <copy todir="${publish.web.dir}" includeemptydirs="true" overwrite="true" verbose="true">
-      <fileset basedir="${web.project.dir}">
-        <include name="**/*.*" />
-      </fileset>
-    </copy>
-
-    <delete  failonerror="true">
-      <fileset basedir="${publish.web.dir}">
-        <include name="**/*.vb" />
-        <include name="**/*.cs" />
-        <include name="**/*.snk" />
-        <include name="**/*.csproj" />
-        <include name="**/*.user" />
-        <include name="**/*.sln" />
-      </fileset>
-    </delete>
+		<copy todir="${publish.appharbor.web.dir}" includeemptydirs="true" overwrite="true" verbose="true">
+		  <fileset basedir="${web.project.dir}">
+			<include name="**/*.*" />
+		  </fileset>
+		</copy>
+		
+		<!-- Copy AppHarbor.sln -->
+		<copy todir="${publish.appharbor.dir}" includeemptydirs="true" overwrite="true" verbose="true">
+		  <fileset basedir="${publish.appharbor.sln.dir}">
+			<include name="**/*.*" />
+		  </fileset>
+		</copy>
 		
 	</target>
 	
