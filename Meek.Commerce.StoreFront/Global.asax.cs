@@ -37,7 +37,7 @@ namespace Meek.Commerce.StoreFront
 
             //var fileName = VirtualPathUtility.GetFileName(@"~\Config\Views.Config");
             //var fileName = System.IO.Path.GetFullPath(@"Config\Views.config");
-            var fileName = HttpContext.Current.Server.MapPath(@"~\Config\Views.config");
+            var fileName = HttpContext.Current.Server.MapPath(@"~\Config\Views.xml");
 
             var viewConfigSource = ViewConfigSource.Create(fileName);
             //var viewConfigSource = ViewConfigSource.Create(@"D:\studio032\Meek.Commerce\Meek.Commerce.StoreFront\Config\Views.config");
