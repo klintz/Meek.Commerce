@@ -222,7 +222,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\modernizr-1.7.js" />
     <Content Include="Scripts\modernizr-1.7.min.js" />
-    <Content Include="Theme\Meek.Green\theme.css" />
+    <Content Include="Themes\Meek.Green\theme.css" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -244,7 +244,9 @@
     <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
     <Content Include="Shared\_MainLayout.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Themes\Meek.Green\Areas\Admin\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
@@ -256,6 +258,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Admin\Index.cshtml" />
+    <Content Include="Config\Views.config" />
     <None Include="studio032.snk" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

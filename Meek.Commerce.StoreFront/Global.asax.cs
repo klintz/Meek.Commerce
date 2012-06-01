@@ -4,7 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
-using Meek.Commerce.Web.Mvc;
+using Meek.Web.Mvc;
+using ExtendedRazorViewEngine = Meek.Commerce.Web.Mvc.ExtendedRazorViewEngine;
 
 namespace Meek.Commerce.StoreFront
 {
@@ -33,8 +34,17 @@ namespace Meek.Commerce.StoreFront
         protected void Application_Start()
         {
             ViewEngines.Engines.Clear();
-            var engine = new ExtendedRazorViewEngine();
 
+            //var fileName = VirtualPathUtility.GetFileName(@"~\Config\Views.Config");
+            //var fileName = System.IO.Path.GetFullPath(@"Config\Views.config");
+            var fileName = HttpContext.Current.Server.MapPath(@"~\Config\Views.config");
+
+            var viewConfigSource = ViewConfigSource.Create(fileName);
+            //var viewConfigSource = ViewConfigSource.Create(@"D:\studio032\Meek.Commerce\Meek.Commerce.StoreFront\Config\Views.config");
+            
+            var engine = new ExtendedRazorViewEngine();
+            engine.SetViewConfigSource(viewConfigSource);
+            
             ViewEngines.Engines.Add(engine);
             AreaRegistration.RegisterAllAreas();
 
