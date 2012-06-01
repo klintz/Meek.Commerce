@@ -42,11 +42,22 @@
 		</copy>	
 		
 		<!-- Copy Web Application -->
-		<!--<copy todir="${publish.web.dir}" includeemptydirs="true" overwrite="true" verbose="true">
-			<fileset basedir="${assemblies.dir}">
-				<include name="**/*.*" />
-			</fileset>
-		</copy>	-->
+    <copy todir="${publish.web.dir}" includeemptydirs="true" overwrite="true" verbose="true">
+      <fileset basedir="${web.project.dir}">
+        <include name="**/*.*" />
+      </fileset>
+    </copy>
+
+    <delete  failonerror="true">
+      <fileset basedir="${publish.web.dir}">
+        <include name="**/*.vb" />
+        <include name="**/*.cs" />
+        <include name="**/*.snk" />
+        <include name="**/*.csproj" />
+        <include name="**/*.user" />
+        <include name="**/*.sln" />
+      </fileset>
+    </delete>
 		
 	</target>
 	
