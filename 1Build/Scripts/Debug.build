@@ -48,7 +48,7 @@
 			</fileset>
 		</copy>
 
-    <delete  failonerror="true">
+    <!-- <delete  failonerror="true">
       <fileset basedir="${publish.web.dir}">
         <include name="**/*.vb" />
         <include name="**/*.cs" />
@@ -57,7 +57,7 @@
         <include name="**/*.user" />
         <include name="**/*.sln" />
       </fileset>
-    </delete>
+    </delete> -->
 
   </target>
 	
