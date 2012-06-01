@@ -41,13 +41,36 @@
   <ItemGroup>
     <Reference Include="Meek, Version=1.0.0.0, Culture=neutral, PublicKeyToken=334ce273b5f41e36, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Assemblies\Meek.dll</HintPath>
+      <HintPath>..\bin\Meek.dll</HintPath>
     </Reference>
     <Reference Include="Meek.Business, Version=1.0.0.0, Culture=neutral, PublicKeyToken=334ce273b5f41e36, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Assemblies\Meek.Business.dll</HintPath>
+      <HintPath>..\bin\Meek.Business.dll</HintPath>
     </Reference>
-    <Reference Include="Meek.Commerce.StoreFront.Helpers">
+    <Reference Include="Meek.Commerce.Business">
+      <HintPath>..\bin\Meek.Commerce.Business.dll</HintPath>
+    </Reference>
+    <Reference Include="Meek.Commerce.Data">
+      <HintPath>..\bin\Meek.Commerce.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Meek.Commerce.Extendable.Business, Version=1.0.0.0, Culture=neutral, PublicKeyToken=334ce273b5f41e36, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Meek.Commerce.Extendable.Business.dll</HintPath>
+    </Reference>
+    <Reference Include="Meek.Commerce.Extendable.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=334ce273b5f41e36, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Meek.Commerce.Extendable.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Meek.Commerce.Framework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=334ce273b5f41e36, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Meek.Commerce.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Meek.Commerce.StoreFront.Controllers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=334ce273b5f41e36, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Meek.Commerce.StoreFront.Controllers.dll</HintPath>
+    </Reference>
+    <Reference Include="Meek.Commerce.StoreFront.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=334ce273b5f41e36, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\bin\Meek.Commerce.StoreFront.Helpers.dll</HintPath>
     </Reference>
     <Reference Include="Meek.Commerce.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=334ce273b5f41e36, processorArchitecture=MSIL">
@@ -60,19 +83,22 @@
     </Reference>
     <Reference Include="Meek.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=334ce273b5f41e36, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Assemblies\Meek.Data.dll</HintPath>
+      <HintPath>..\bin\Meek.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Meek.Data.EntityFramework">
+      <HintPath>..\bin\Meek.Data.EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="Meek.Presentation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=334ce273b5f41e36, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Assemblies\Meek.Presentation.dll</HintPath>
+      <HintPath>..\bin\Meek.Presentation.dll</HintPath>
     </Reference>
     <Reference Include="Meek.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=334ce273b5f41e36, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Assemblies\Meek.Web.dll</HintPath>
+      <HintPath>..\bin\Meek.Web.dll</HintPath>
     </Reference>
     <Reference Include="Meek.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=334ce273b5f41e36, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Assemblies\Meek.Web.Mvc.dll</HintPath>
+      <HintPath>..\bin\Meek.Web.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="System.Data.Entity">
       <Private>True</Private>
@@ -231,12 +257,6 @@
   <ItemGroup>
     <Content Include="Areas\Admin\Index.cshtml" />
     <None Include="studio032.snk" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Meek.Commerce.StoreFront.Controllers\Meek.Commerce.StoreFront.Controllers.csproj">
-      <Project>{0621FCDA-6915-4FCB-A690-937B04030E86}</Project>
-      <Name>Meek.Commerce.StoreFront.Controllers</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
