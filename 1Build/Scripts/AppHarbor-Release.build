@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<project name="Meek Framework" default="meek.commerce.build" basedir=".">
+	
+	<!-- Properties -->
+	<property name="nant.settings.currentframework" value="net-4.0" />
+	<property name="build.configuration" value="release" />   
+	<include buildfile="Build.Properties" />
+	<!-- End of Properties -->
+	
+	
+	
+	<!-- Targets -->	
+	<target name="init" failonerror="true">
+		<echo message="Build Script Starting" />
+		<delete dir="${publish.dir}" if="${directory::exists('${publish.dir}')}" />
+		<mkdir dir="${publish.dir}" />				
+	</target>
+	
+	<target name="build.meek.lib" failonerror="true">
+		<foreach item="File" property="filename" >
+			<in>
+				<items>
+					<include name="${solution.dir}\00*.sln" />
+				</items>
+			</in>
+			<do>
+				<echo message="Building ${filename}" />
+				<exec program="${MSBuildPath}">
+					<arg line="/p:Configuration=${build.configuration}"/>
+					<arg line='"${filename}"' />
+				</exec>
+			</do>
+		</foreach> 
+	</target>
+	
+	<target name="copy.build.files" failonerror="true">
+		<!-- Copy Assemblies -->
+		<copy todir="${publish.appharbor.assemblies.dir}" includeemptydirs="true" overwrite="true" verbose="true">
+			<fileset basedir="${reference.assemblies.dir}">
+				<include name="**/*.*" />
+			</fileset>
+		</copy>	
+		
+		<!-- Copy Bin -->
+		<copy todir="${publish.appharbor.dir}\bin" includeemptydirs="true" overwrite="true" verbose="true">
+			<fileset basedir="${assemblies.dir}">
+				<include name="**/*.*" />
+			</fileset>
+		</copy>	
+		
+		<!-- Copy Web Application -->
+		<copy todir="${publish.appharbor.web.dir}" includeemptydirs="true" overwrite="true" verbose="true">
+		  <fileset basedir="${web.project.dir}">
+			<include name="**/*.*" />
+		  </fileset>
+		</copy>
+		
+		<!-- Copy AppHarbor.sln -->
+		<copy todir="${publish.appharbor.dir}" includeemptydirs="true" overwrite="true" verbose="true">
+		  <fileset basedir="${publish.appharbor.sln.dir}">
+			<include name="**/*.*" />
+		  </fileset>
+		</copy>
+		
+	</target>
+	
+	<target name="meek.commerce.build" depends="init" failonerror="true">
+		<echo message="Build Started" />
+		<call target="build.meek.lib" />		
+		<call target="copy.build.files" />		
+		<echo message="Build Completed" />
+	</target>  
+	<!-- End of Targets -->
+	
+</project>
